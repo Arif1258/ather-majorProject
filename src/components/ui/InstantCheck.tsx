@@ -88,11 +88,11 @@ export function InstantCheck() {
   };
 
   return (
-    <GlassCard className="w-full mb-8 relative overflow-hidden" glowColor={getGlowColor()}>
+    <GlassCard className="w-full h-full relative overflow-y-auto custom-scrollbar" glowColor={getGlowColor()}>
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-brand-cyan/5 rounded-full blur-3xl" />
       
-      <div className="relative z-10 flex flex-col md:flex-row gap-6 items-start">
+      <div className="relative z-10 flex flex-col gap-6 items-start">
         <div className="flex-1 w-full space-y-4">
           <div>
             <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70 flex items-center gap-2">
@@ -102,8 +102,8 @@ export function InstantCheck() {
             <p className="text-sm text-white/50 mt-1">Run an immediate global performance analysis on any endpoint.</p>
           </div>
 
-          <form onSubmit={handleCheck} className="flex flex-col sm:flex-row gap-3">
-            <div className="relative flex-1">
+          <form onSubmit={handleCheck} className="flex flex-col gap-3">
+            <div className="relative w-full">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40" />
               <input
                 type="text"
@@ -116,7 +116,7 @@ export function InstantCheck() {
             <button
               type="submit"
               disabled={loading || !url}
-              className="bg-brand-cyan/20 hover:bg-brand-cyan/30 text-brand-cyan border border-brand-cyan/50 rounded-xl px-6 py-3 font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+              className="w-full flex justify-center bg-brand-cyan/20 hover:bg-brand-cyan/30 text-brand-cyan border border-brand-cyan/50 rounded-xl px-6 py-3 font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
             >
               {loading ? (
                 <span className="flex items-center gap-2">
@@ -149,7 +149,7 @@ export function InstantCheck() {
 
         {/* Results Pane */}
         {result && !result.error && (
-          <div className="flex-1 w-full bg-black/40 border border-white/5 rounded-xl p-5 animate-in fade-in slide-in-from-right-4">
+          <div className="flex-1 w-full bg-black/40 border border-white/5 rounded-xl p-5 animate-in fade-in zoom-in-95 duration-300">
             <div className="flex justify-between items-start mb-4">
               <div>
                 <h3 className="text-white font-medium break-all">{result.url}</h3>

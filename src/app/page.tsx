@@ -70,11 +70,11 @@ export default function Dashboard() {
          </div>
 
          {/* Right Col (1/3 width) - Active Issues & Quick Check */}
-         <div className="lg:col-span-1 space-y-6">
-            <div className="h-[400px]">
+         <div className="lg:col-span-1 space-y-6 flex flex-col">
+            <div className="h-[400px] shrink-0">
                <ActiveIssues issues={data.activeIssues} />
             </div>
-            <div className="h-[400px]">
+            <div className="flex-1">
                <InstantCheck />
             </div>
          </div>

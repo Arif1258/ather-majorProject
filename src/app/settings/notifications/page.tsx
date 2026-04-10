@@ -1,7 +1,7 @@
 'use client';
 
 import { GlassCard } from "@/components/ui/GlassCard";
-import { Link2, Bell, Send, Mail } from "lucide-react";
+import { Link2, Bell, CheckCircle2, Mail } from "lucide-react";
 import { useState } from "react";
 
 export default function NotificationSettings() {

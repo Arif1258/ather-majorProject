@@ -1,3 +1,0 @@
-module.exports=[875690,e=>{"use strict";e.s(["MonitoringLog",()=>i]);var t=e.i(926046);let r=new t.Schema({websiteId:{type:t.Schema.Types.ObjectId,ref:"Website",required:!0,index:!0},timestamp:{type:Date,default:Date.now,index:!0},responseTime:{type:Number,required:!0},status:{type:String,enum:["UP","DOWN"],required:!0},statusCode:{type:Number},healthStatus:{type:String,enum:["Healthy","Slow","Down"],required:!0},regionData:[{region:{type:String,required:!0},responseTime:{type:Number,required:!0},status:{type:String,enum:["UP","DOWN"],required:!0}}]});r.index({websiteId:1,timestamp:-1});let i=t.default.models.MonitoringLog||t.default.model("MonitoringLog",r)}];
-
-//# sourceMappingURL=frontend_src_models_MonitoringLog_ts_dfa450a1._.js.map
